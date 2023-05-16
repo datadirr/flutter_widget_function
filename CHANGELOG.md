@@ -1,6 +1,6 @@
 ## 1.4.0
 
-* Custom Widgets and Functions, Widgets and Functions easy to access, reuse and no longer code.
+* Keyboard dismiss: Functionality changes.
 
 ## 1.3.0
 

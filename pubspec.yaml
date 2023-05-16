@@ -5,7 +5,7 @@ homepage: https://datadirr.com
 version: 1.4.0
 
 environment:
-  sdk: '>=2.19.6 <3.7.7'
+  sdk: '>=2.19.6 <3.10.0'
   flutter: ">=2.5.0"
 
 dependencies:

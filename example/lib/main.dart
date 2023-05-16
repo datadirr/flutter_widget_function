@@ -14,9 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return KeyboardDismiss(
-      onTapDismiss: true,
-      child:
-          MaterialApp(routes: Routes.routes(context), home: const Dashboard()),
-    );
+        child: MaterialApp(
+            routes: Routes.routes(context), home: const Dashboard()));
   }
 }

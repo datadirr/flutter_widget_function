@@ -35,7 +35,6 @@ class _DashboardState extends State<Dashboard> {
 
   _mbDashboard(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black12,
         appBar: AppBar(title: const Text('flutter_widget_function')),
         body: SafeArea(
             child: Padding(

@@ -45,7 +45,6 @@ ResponsiveLayout(
 
 ```dart
 KeyboardDismiss(
-  onTapDismiss: true,
   child: MaterialApp(
     home: const MyApp()),
 );

@@ -23,12 +23,12 @@ class _TextFieldExampleState extends State<TextFieldExample> {
       appBar: AppBar(
         title: const Text("TextField Example"),
       ),
-      body: SafeArea(
+      body: const SafeArea(
           child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: EdgeInsets.all(20),
           child: Column(
-            children: const [
+            children: [
               DDTextField(labelText: "Value", hintText: "Value"),
             ],
           ),
