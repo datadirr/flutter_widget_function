@@ -1,3 +1,7 @@
+## 1.5.0
+
+* Keyboard dismiss: Functionality changes.
+
 ## 1.4.0
 
 * Keyboard dismiss: Functionality changes.
