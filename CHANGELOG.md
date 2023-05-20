@@ -1,3 +1,7 @@
+## 1.6.0
+
+* New: DDCard Widget.
+
 ## 1.5.0
 
 * New: DDCard Widget.
