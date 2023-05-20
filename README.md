@@ -58,6 +58,18 @@ DDTextField(labelText: "Value", hintText: "Value")
 ```
 
 
+### Card
+
+```dart
+DDCard(
+  color: Colors.blue,
+  shadowColor: Colors.grey,
+  radius: 20,
+  blur: 15
+)
+```
+
+
 ### Progress Dialog
 
 ```dart

@@ -20,7 +20,7 @@ class _DashboardState extends State<Dashboard> {
     super.initState();
     _dialog = ProgressDialog(context);
     _dialog.show();
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 1), () {
       _dialog.dismiss();
     });
   }
@@ -95,7 +95,13 @@ class _DashboardState extends State<Dashboard> {
               onPressed: () {
                 NavigatorName.to(context, Routes.textFieldExample);
               },
-              child: const Text("TextField"))
+              child: const Text("TextField")),
+          const SizedBox(height: 20),
+          ElevatedButton(
+              onPressed: () {
+                NavigatorName.to(context, Routes.cardExample);
+              },
+              child: const Text("Card"))
         ],
       ),
     );

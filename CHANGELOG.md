@@ -1,6 +1,6 @@
 ## 1.5.0
 
-* Keyboard dismiss: Functionality changes.
+* New: DDCard Widget.
 
 ## 1.4.0
 
