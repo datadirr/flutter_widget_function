@@ -30,6 +30,32 @@ For help getting started with Flutter, view the online
 
 Please follow this [example](https://github.com/datadirr/flutter_widget_function/tree/master/example) here.
 
+## Functions
+
+### Utils Function
+
+```dart
+Utils.equals()
+Utils.isNullOREmpty()
+Utils.isNullOREmptyORZero()
+```
+
+
+### Extension Function
+
+```dart
+String.parseInt()
+String.parseDouble()
+String.parseBool()
+Int.parseBool()
+TextEditingController.trimText()
+```
+
+
+
+
+## Widgets
+
 ### Responsive Layout
 
 ```dart

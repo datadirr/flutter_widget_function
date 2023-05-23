@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_function/keyboard/keyboard_dismiss.dart';
+import 'package:flutter_widget_function/widget/keyboard/keyboard_dismiss.dart';
 import 'package:flutter_widget_function_example/dashboard.dart';
 import 'package:flutter_widget_function_example/routes/routes.dart';
 

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_function/dialog/progress_dialog.dart';
-import 'package:flutter_widget_function/responsive/responsive_layout.dart';
+import 'package:flutter_widget_function/widget/dialog/progress_dialog.dart';
+import 'package:flutter_widget_function/widget/responsive/responsive_layout.dart';
 import 'package:flutter_widget_function_example/routes/routes.dart';
 import 'package:navigator_plus/navigate.dart';
 

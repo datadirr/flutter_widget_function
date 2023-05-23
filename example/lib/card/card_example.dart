@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_function/card/dd_card.dart';
-import 'package:flutter_widget_function/responsive/responsive_layout.dart';
+import 'package:flutter_widget_function/widget/card/dd_card.dart';
+import 'package:flutter_widget_function/widget/responsive/responsive_layout.dart';
 
 class CardExample extends StatefulWidget {
   const CardExample({Key? key}) : super(key: key);

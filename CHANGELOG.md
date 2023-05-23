@@ -1,6 +1,6 @@
 ## 1.6.0
 
-* New: DDCard Widget.
+* Utils, Extension functions
 
 ## 1.5.0
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_function/responsive/responsive_layout.dart';
-import 'package:flutter_widget_function/text_field/dd_text_field.dart';
+import 'package:flutter_widget_function/widget/responsive/responsive_layout.dart';
+import 'package:flutter_widget_function/widget/text_field/dd_text_field.dart';
 
 class TextFieldExample extends StatefulWidget {
   const TextFieldExample({Key? key}) : super(key: key);
