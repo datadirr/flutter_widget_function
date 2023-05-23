@@ -1,3 +1,7 @@
+## 1.7.0
+
+* Utils, Extension functions
+
 ## 1.6.0
 
 * Utils, Extension functions
