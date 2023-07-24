@@ -47,7 +47,7 @@ Utils.isNullOREmptyORZero()
 String.parseInt()
 String.parseDouble()
 String.parseBool()
-Int.parseBool()
+int.parseBool()
 TextEditingController.trimText()
 ```
 

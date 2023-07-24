@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_function/function/utils.dart';
 
@@ -41,9 +40,9 @@ extension StringExtension on String {
   }
 }
 
-extension IntExtension on Int {
+extension IntExtension on int {
   bool parseBool() {
-    return (toString() == "1");
+    return (this == 1);
   }
 }
 
