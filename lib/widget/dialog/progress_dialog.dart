@@ -78,11 +78,10 @@ class DDProgressDialogWidget extends StatefulWidget {
   final Function(bool show) onDismiss;
 
   const DDProgressDialogWidget(
-      {Key? key,
+      {super.key,
       required this.dismissible,
       required this.child,
-      required this.onDismiss})
-      : super(key: key);
+      required this.onDismiss});
 
   @override
   State<DDProgressDialogWidget> createState() => _DDProgressDialogWidgetState();
@@ -93,9 +92,9 @@ class _DDProgressDialogWidgetState extends State<DDProgressDialogWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-        onWillPop: () async {
-          return _dismiss();
+    return PopScope(
+        onPopInvoked: (pop) {
+          _dismiss();
         },
         child: (widget.child == null)
             ? const Center(

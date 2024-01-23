@@ -10,7 +10,7 @@ class DDCard extends StatelessWidget {
   final Color? shadowColor;
 
   const DDCard({
-    Key? key,
+    super.key,
     this.child,
     this.margin,
     this.padding,
@@ -18,7 +18,7 @@ class DDCard extends StatelessWidget {
     this.blur = 5,
     this.color = Colors.white,
     this.shadowColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 ## 1.8.0
 
-* Utils, Extension functions
+* Version upgrade
 
 ## 1.7.0
 

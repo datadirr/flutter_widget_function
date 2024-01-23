@@ -23,7 +23,7 @@ class DDTextField extends StatelessWidget {
   final bool capitalize;
 
   const DDTextField(
-      {Key? key,
+      {super.key,
       this.controller,
       this.labelText,
       this.hintText,
@@ -41,8 +41,7 @@ class DDTextField extends StatelessWidget {
       this.onTap,
       this.onChanged,
       this.onSaved,
-      this.capitalize = false})
-      : super(key: key);
+      this.capitalize = false});
 
   @override
   Widget build(BuildContext context) {
