@@ -52,6 +52,19 @@ TextEditingController.trimText()
 ```
 
 
+### Http Overrides
+
+If you Enable SSL certificate verification for api call
+```dart
+HttpSSLCertificate.enable();
+```
+
+If you Disable SSL certificate verification for api call
+```dart
+HttpSSLCertificate.disable();
+```
+
+
 
 
 ## Widgets
@@ -102,16 +115,4 @@ DDCard(
 ProgressDialog _dialog = ProgressDialog(context);
 _dialog.show();
 _dialog.dismiss();
-```
-
-### Http Overrides
-
-If you Enable SSL certificate verification for api call
-```dart
-HttpSSLCertificate.enable();
-```
-
-If you Disable SSL certificate verification for api call
-```dart
-HttpSSLCertificate.disable();
 ```
