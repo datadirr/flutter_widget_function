@@ -1,3 +1,7 @@
+## 1.12.0
+
+* Http Overrides - Enable/Disable SSL certificate verification for api call
+
 ## 1.11.0
 
 * Http Overrides - Enable/Disable SSL certificate verification for api call
