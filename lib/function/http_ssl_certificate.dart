@@ -15,6 +15,8 @@ class _HttpSSLCertificateOverrides extends HttpOverrides {
 }
 
 class HttpSSLCertificate {
+  HttpSSLCertificate._();
+
   static enable() {
     HttpOverrides.global = _HttpSSLCertificateOverrides(badCertificate: false);
   }
