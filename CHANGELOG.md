@@ -1,6 +1,6 @@
 ## 1.9.0
 
-* Version upgrade
+* Http Overrides - Enable/Disable SSL certificate verification for api call
 
 ## 1.8.0
 
