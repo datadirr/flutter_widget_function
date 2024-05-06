@@ -1,6 +1,6 @@
 ## 1.12.0
 
-* Http Overrides - Enable/Disable SSL certificate verification for api call
+* Tap and Touch widgets added
 
 ## 1.11.0
 

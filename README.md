@@ -65,6 +65,15 @@ HttpSSLCertificate.disable();
 ```
 
 
+### Progress Dialog
+
+```dart
+ProgressDialog _dialog = ProgressDialog(context);
+_dialog.show();
+_dialog.dismiss();
+```
+
+
 
 
 ## Widgets
@@ -109,10 +118,23 @@ DDCard(
 ```
 
 
-### Progress Dialog
+### Tap
 
 ```dart
-ProgressDialog _dialog = ProgressDialog(context);
-_dialog.show();
-_dialog.dismiss();
+Tap(
+  onTap: () {
+    //your functional code  
+  },
+  child: child
+)
+```
+
+
+### Display Touch (Enable / Disable)
+
+```dart
+Touch(
+  disable: true,
+  child: child
+)
 ```
