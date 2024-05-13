@@ -1,6 +1,6 @@
 ## 2.1.0
 
-* Tap and Touch widgets added
+* FlexWidth and FlexHeight widgets added
 
 ## 1.12.0
 

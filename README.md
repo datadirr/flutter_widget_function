@@ -138,3 +138,16 @@ Touch(
   child: child
 )
 ```
+
+
+### Flex Width and Height
+
+```dart
+FlexWidth(
+  child: child
+)
+
+FlexHeight(
+child: child
+)
+```

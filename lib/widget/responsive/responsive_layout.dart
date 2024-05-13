@@ -30,3 +30,37 @@ class ResponsiveLayout extends StatelessWidget {
     });
   }
 }
+
+/// flexible width
+class FlexWidth extends StatelessWidget {
+  final double? flexWidth;
+  final double? flexHeight;
+  final Widget? child;
+
+  const FlexWidth({super.key, this.flexWidth, this.flexHeight, this.child});
+
+  @override
+  Widget build(BuildContext context) {
+    return IntrinsicWidth(
+      key: key,
+      stepWidth: flexWidth,
+      stepHeight: flexHeight,
+      child: child,
+    );
+  }
+}
+
+/// flexible height
+class FlexHeight extends StatelessWidget {
+  final Widget? child;
+
+  const FlexHeight({super.key, this.child});
+
+  @override
+  Widget build(BuildContext context) {
+    return IntrinsicHeight(
+      key: key,
+      child: child,
+    );
+  }
+}
