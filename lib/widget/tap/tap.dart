@@ -20,8 +20,7 @@ class Tap extends StatelessWidget {
     return InkWell(
       splashColor: splashColor ?? Colors.transparent,
       hoverColor: hoverColor ?? Colors.transparent,
-      overlayColor:
-          MaterialStateProperty.all(overlayColor ?? Colors.transparent),
+      overlayColor: WidgetStateProperty.all(overlayColor ?? Colors.transparent),
       onTap: onTap,
       child: child,
     );

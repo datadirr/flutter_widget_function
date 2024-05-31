@@ -1,5 +1,10 @@
 ## 2.1.0
 
+* add namespace for android.
+* upgrade dependencies.
+
+## 2.0.0
+
 * FlexWidth and FlexHeight widgets added
 
 ## 1.12.0
