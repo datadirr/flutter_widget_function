@@ -26,12 +26,15 @@ class DDCard extends StatelessWidget {
       margin: margin,
       padding: padding,
       decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(radius),
-          boxShadow: [
-            BoxShadow(
-                color: shadowColor ?? Colors.grey.shade500, blurRadius: blur)
-          ]),
+        color: color,
+        borderRadius: BorderRadius.circular(radius),
+        boxShadow: [
+          BoxShadow(
+            color: shadowColor ?? Colors.grey.shade500,
+            blurRadius: blur,
+          ),
+        ],
+      ),
       child: child,
     );
   }

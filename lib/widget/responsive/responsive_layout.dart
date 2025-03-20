@@ -12,22 +12,27 @@ class ResponsiveLayout extends StatelessWidget {
   /// size (px) 600-...
   final Widget? desktopBody;
 
-  const ResponsiveLayout(
-      {super.key, this.mobileBody, this.tabletBody, this.desktopBody});
+  const ResponsiveLayout({
+    super.key,
+    this.mobileBody,
+    this.tabletBody,
+    this.desktopBody,
+  });
 
   @override
   Widget build(BuildContext context) {
     Widget defaultBody = mobileBody ?? tabletBody ?? desktopBody ?? Container();
     return LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-      if (constraints.maxWidth < 600) {
-        return mobileBody ?? defaultBody;
-      } else if (constraints.maxWidth > 1200) {
-        return desktopBody ?? defaultBody;
-      } else {
-        return tabletBody ?? defaultBody;
-      }
-    });
+      builder: (BuildContext context, BoxConstraints constraints) {
+        if (constraints.maxWidth < 600) {
+          return mobileBody ?? defaultBody;
+        } else if (constraints.maxWidth > 1200) {
+          return desktopBody ?? defaultBody;
+        } else {
+          return tabletBody ?? defaultBody;
+        }
+      },
+    );
   }
 }
 
@@ -58,9 +63,6 @@ class FlexHeight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicHeight(
-      key: key,
-      child: child,
-    );
+    return IntrinsicHeight(key: key, child: child);
   }
 }

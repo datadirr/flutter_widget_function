@@ -22,26 +22,27 @@ class DDTextField extends StatelessWidget {
   final Function(String? value)? onSaved;
   final bool capitalize;
 
-  const DDTextField(
-      {super.key,
-      this.controller,
-      this.labelText,
-      this.hintText,
-      this.prefixText,
-      this.suffixText,
-      this.minLines,
-      this.maxLines,
-      this.maxLength,
-      this.textAlign = TextAlign.start,
-      this.inputType,
-      this.inputFormatters,
-      this.readOnly = false,
-      this.enabled = true,
-      this.border = true,
-      this.onTap,
-      this.onChanged,
-      this.onSaved,
-      this.capitalize = false});
+  const DDTextField({
+    super.key,
+    this.controller,
+    this.labelText,
+    this.hintText,
+    this.prefixText,
+    this.suffixText,
+    this.minLines,
+    this.maxLines,
+    this.maxLength,
+    this.textAlign = TextAlign.start,
+    this.inputType,
+    this.inputFormatters,
+    this.readOnly = false,
+    this.enabled = true,
+    this.border = true,
+    this.onTap,
+    this.onChanged,
+    this.onSaved,
+    this.capitalize = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -73,11 +74,12 @@ class DDTextField extends StatelessWidget {
       readOnly: readOnly,
       enabled: enabled,
       decoration: InputDecoration(
-          border: border ? const OutlineInputBorder() : null,
-          labelText: labelText,
-          hintText: hintText,
-          prefixText: prefixText,
-          suffixText: suffixText),
+        border: border ? const OutlineInputBorder() : null,
+        labelText: labelText,
+        hintText: hintText,
+        prefixText: prefixText,
+        suffixText: suffixText,
+      ),
     );
   }
 }

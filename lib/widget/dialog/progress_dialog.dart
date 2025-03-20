@@ -51,13 +51,16 @@ class ProgressDialog implements _ProgressDialog {
   void _showDialog() {
     Timer(const Duration(), () {
       showDialog(
-          context: context,
-          builder: (context) => DDProgressDialogWidget(
+        context: context,
+        builder:
+            (context) => DDProgressDialogWidget(
               dismissible: dismissible,
               child: child,
               onDismiss: (show) {
                 _show = show;
-              }));
+              },
+            ),
+      );
     });
   }
 
@@ -77,11 +80,12 @@ class DDProgressDialogWidget extends StatefulWidget {
   final Widget? child;
   final Function(bool show) onDismiss;
 
-  const DDProgressDialogWidget(
-      {super.key,
-      required this.dismissible,
-      required this.child,
-      required this.onDismiss});
+  const DDProgressDialogWidget({
+    super.key,
+    required this.dismissible,
+    required this.child,
+    required this.onDismiss,
+  });
 
   @override
   State<DDProgressDialogWidget> createState() => _DDProgressDialogWidgetState();
@@ -93,21 +97,21 @@ class _DDProgressDialogWidgetState extends State<DDProgressDialogWidget> {
   @override
   Widget build(BuildContext context) {
     return PopScope(
-        onPopInvoked: (pop) {
-          _dismiss();
-        },
-        child: (widget.child == null)
-            ? const Center(
+      onPopInvokedWithResult: (didPop, result) {
+        _dismiss();
+      },
+      child:
+          (widget.child == null)
+              ? const Center(
                 child: Card(
                   child: Padding(
                     padding: EdgeInsets.all(10),
-                    child: CircularProgressIndicator(
-                      strokeWidth: 2,
-                    ),
+                    child: CircularProgressIndicator(strokeWidth: 2),
                   ),
                 ),
               )
-            : Dialog(child: widget.child));
+              : Dialog(child: widget.child),
+    );
   }
 
   _dismiss() {

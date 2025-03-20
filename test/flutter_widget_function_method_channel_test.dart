@@ -3,20 +3,17 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_widget_function/flutter_widget_function_method_channel.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   MethodChannelFlutterWidgetFunction platform =
       MethodChannelFlutterWidgetFunction();
   const MethodChannel channel = MethodChannel('flutter_widget_function');
 
-  TestWidgetsFlutterBinding.ensureInitialized();
-
   setUp(() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-        .setMockMethodCallHandler(
-      channel,
-      (MethodCall methodCall) async {
-        return '42';
-      },
-    );
+        .setMockMethodCallHandler(channel, (MethodCall methodCall) async {
+          return '42';
+        });
   });
 
   tearDown(() {

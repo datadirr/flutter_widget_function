@@ -7,13 +7,14 @@ class Tap extends StatelessWidget {
   final Color? overlayColor;
   final Color? hoverColor;
 
-  const Tap(
-      {super.key,
-      this.onTap,
-      this.child,
-      this.splashColor,
-      this.overlayColor,
-      this.hoverColor});
+  const Tap({
+    super.key,
+    this.onTap,
+    this.child,
+    this.splashColor,
+    this.overlayColor,
+    this.hoverColor,
+  });
 
   @override
   Widget build(BuildContext context) {

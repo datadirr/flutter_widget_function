@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget_function/function/http_ssl_certificate.dart';
 import 'package:flutter_widget_function/widget/keyboard/keyboard_dismiss.dart';
 import 'package:flutter_widget_function_example/dashboard.dart';
-import 'package:flutter_widget_function_example/routes/routes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,12 +10,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return KeyboardDismiss(
-        child: MaterialApp(
-            routes: Routes.routes(context), home: const Dashboard()));
+    return KeyboardDismiss(child: MaterialApp(home: const Dashboard()));
   }
 }
