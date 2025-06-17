@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_function/function/extension.dart';
 import 'package:flutter_widget_function/widget/dialog/progress_dialog.dart';
 import 'package:flutter_widget_function/widget/responsive/responsive_layout.dart';
 import 'package:flutter_widget_function_example/card/card_example.dart';
@@ -18,6 +19,7 @@ class _DashboardState extends State<Dashboard> {
   @override
   void initState() {
     super.initState();
+    print("-000000001".parseInt());
     _dialog = ProgressDialog(context);
     _dialog.show();
     Timer(const Duration(seconds: 1), () {
