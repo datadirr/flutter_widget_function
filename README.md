@@ -44,10 +44,10 @@ Utils.isNullOREmptyORZero()
 ### Extension Function
 
 ```dart
-String.parseInt()
-String.parseDouble()
-String.parseBool()
-int.parseBool()
+dynamic.parseInt()
+dynamic.parseDouble()
+dynamic.parseBool()
+dynamic.parseBool()
 TextEditingController.trimText()
 ```
 
