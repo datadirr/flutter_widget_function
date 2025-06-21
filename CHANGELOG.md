@@ -1,6 +1,6 @@
 ## 3.2.0
 
-* Upgrade dependencies.
+* isNullOrEmpty, isNullOrEmptyOrZero and equals move to extension function.
 
 ## 3.1.0
 

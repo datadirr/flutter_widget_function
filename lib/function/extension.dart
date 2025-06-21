@@ -1,17 +1,58 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_function/function/utils.dart';
 
-extension DynamicExtension on dynamic {
+extension UtilsExtension on Object? {
+  /// Check null or empty for any type
+  bool isNullOrEmpty() {
+    final value = this;
+    if (value == null) return true;
+    if (value is String) return value.trim().isEmpty;
+    if (value is Iterable) return value.isEmpty;
+    if (value is Map) return value.isEmpty;
+    return false;
+  }
+
+  /// Check null or empty or zero for any type
+  bool isNullOrEmptyOrZero() {
+    final value = this;
+    if (value == null) return true;
+
+    if (value is String) {
+      final trimmed = value.trim();
+      // Matches "0", "000", "0.0", "0.00", "00.000", etc.
+      return trimmed.isEmpty || RegExp(r'^0+(\.0+)?$').hasMatch(trimmed);
+    }
+
+    if (value is num) return value == 0;
+    if (value is Iterable) return value.isEmpty;
+    if (value is Map) return value.isEmpty;
+    return false;
+  }
+
+  /// Check equals with optional case-insensitive check
+  bool equals(Object? other, {bool ignoreCase = true}) {
+    final a = this;
+    final b = other;
+
+    if (a == null && b == null) return true;
+    if (a == null || b == null) return false;
+
+    if (a is String && b is String && ignoreCase) {
+      return a.trim().toLowerCase() == b.trim().toLowerCase();
+    }
+
+    return a == b;
+  }
+
   int parseInt() {
     try {
-      if (Utils.isNullOrEmptyOrZero(this)) return 0;
+      if (isNullOrEmptyOrZero()) return 0;
 
-      if (this is int) return this;
-      if (this is double) return this.toInt();
-      if (this is bool) return this ? 1 : 0;
+      if (this is int) return this as int;
+      if (this is double) return (this as double).toInt();
+      if (this is bool) return (this as bool) ? 1 : 0;
 
       final str = toString().trim();
-      if (Utils.equals(str, "+") || Utils.equals(str, "-")) return 0;
+      if (str.equals("+") || str.equals("-")) return 0;
 
       return int.parse(str.split(".")[0]);
     } catch (e) {
@@ -21,30 +62,30 @@ extension DynamicExtension on dynamic {
 
   double parseDouble({int? decimalDigits}) {
     try {
-      if (Utils.isNullOrEmptyOrZero(this)) {
+      if (isNullOrEmptyOrZero()) {
         return decimalDigits == null
             ? 0
             : double.parse(0.toStringAsFixed(decimalDigits));
       }
 
       if (this is double) {
+        final d = this as double;
         return decimalDigits == null
-            ? this
-            : double.parse(this.toStringAsFixed(decimalDigits));
+            ? d
+            : double.parse(d.toStringAsFixed(decimalDigits));
       }
 
       if (this is int) {
+        final i = this as int;
         return decimalDigits == null
-            ? this.toDouble()
-            : double.parse(this.toDouble().toStringAsFixed(decimalDigits));
+            ? i.toDouble()
+            : double.parse(i.toDouble().toStringAsFixed(decimalDigits));
       }
 
-      if (this is bool) return this ? 1.0 : 0.0;
+      if (this is bool) return (this as bool) ? 1.0 : 0.0;
 
       final str = toString().trim();
-      if (Utils.equals(str, "+") ||
-          Utils.equals(str, "-") ||
-          Utils.equals(str, ".")) {
+      if (str.equals("+") || str.equals("-") || str.equals(".")) {
         return decimalDigits == null
             ? 0
             : double.parse(0.toStringAsFixed(decimalDigits));
@@ -61,8 +102,8 @@ extension DynamicExtension on dynamic {
 
   bool parseBool() {
     try {
-      if (this is bool) return this;
-      if (this is num) return this != 0;
+      if (this is bool) return this as bool;
+      if (this is num) return (this as num) != 0;
       final str = toString().trim().toLowerCase();
       return !(str.isEmpty || str == "0" || str == "false" || str == "null");
     } catch (e) {
@@ -71,35 +112,7 @@ extension DynamicExtension on dynamic {
   }
 
   String toSafeString({String defaultValue = ""}) {
-    return Utils.isNullOrEmpty(this) ? defaultValue : toString().trim();
-  }
-
-  DateTime? parseDateTime({List<String> formats = const []}) {
-    try {
-      if (this == null) return null;
-
-      if (this is DateTime) return this;
-      if (this is int) {
-        // Unix timestamp (seconds or milliseconds)
-        return toString().length == 10
-            ? DateTime.fromMillisecondsSinceEpoch(this * 1000)
-            : DateTime.fromMillisecondsSinceEpoch(this);
-      }
-
-      final str = toString().trim();
-
-      // Try built-in parsing
-      final parsed = DateTime.tryParse(str);
-      if (parsed != null) return parsed;
-
-      // Try custom formats if provided (requires intl)
-      for (final format in formats) {
-        try {
-          return DateFormat(format).parseStrict(str);
-        } catch (_) {}
-      }
-    } catch (_) {}
-    return null;
+    return isNullOrEmpty() ? defaultValue : toString().trim();
   }
 }
 

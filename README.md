@@ -32,22 +32,16 @@ Please follow this [example](https://github.com/datadirr/flutter_widget_function
 
 ## Functions
 
-### Utils Function
-
-```dart
-Utils.equals()
-Utils.isNullOREmpty()
-Utils.isNullOREmptyORZero()
-```
-
-
 ### Extension Function
 
 ```dart
-dynamic.parseInt()
-dynamic.parseDouble()
-dynamic.parseBool()
-dynamic.parseBool()
+Object.isNullOREmpty()
+Object.isNullOREmptyORZero()
+Object.equals()
+Object.parseInt()
+Object.parseDouble()
+Object.parseBool()
+Object.parseBool()
 TextEditingController.trimText()
 ```
 
