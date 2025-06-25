@@ -1,3 +1,7 @@
+## 3.4.0
+
+* revert old functions.
+
 ## 3.3.0
 
 * revert old functions.
