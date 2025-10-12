@@ -19,7 +19,7 @@ class _CardExampleState extends State<CardExample> {
     );
   }
 
-  _mb(BuildContext context) {
+  Widget _mb(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Card Example")),
       body: const SafeArea(

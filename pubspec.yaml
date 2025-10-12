@@ -2,7 +2,7 @@ name: flutter_widget_function
 description: "Custom Widgets and Functions, Widgets and Functions easy to access, reuse and no longer code."
 repository: https://github.com/datadirr/flutter_widget_function
 homepage: https://datadirr.com
-version: 3.4.0
+version: 4.0.0
 
 screenshots:
   - description: The datadirr company logo.
@@ -23,7 +23,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

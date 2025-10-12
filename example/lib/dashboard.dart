@@ -34,7 +34,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
-  _mbDashboard(BuildContext context) {
+  Widget _mbDashboard(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('flutter_widget_function')),
       body: SafeArea(
@@ -53,7 +53,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
-  _tbDashboard(BuildContext context) {
+  Widget _tbDashboard(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black26,
       appBar: AppBar(title: const Text('widgets_functions')),
@@ -73,7 +73,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
-  _dbDashboard(BuildContext context) {
+  Widget _dbDashboard(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black38,
       appBar: AppBar(title: const Text('widgets_functions')),
@@ -93,7 +93,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
-  _widgets(BuildContext context) {
+  Widget _widgets(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

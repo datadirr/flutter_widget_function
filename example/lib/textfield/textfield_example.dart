@@ -19,7 +19,7 @@ class _TextFieldExampleState extends State<TextFieldExample> {
     );
   }
 
-  _mbTextFieldExample(BuildContext context) {
+  Widget _mbTextFieldExample(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("TextField Example")),
       body: const SafeArea(

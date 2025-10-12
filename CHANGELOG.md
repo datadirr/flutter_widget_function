@@ -1,6 +1,6 @@
-## 3.4.0
+## 4.0.0
 
-* revert old functions.
+* Upgrade dependencies.
 
 ## 3.3.0
 

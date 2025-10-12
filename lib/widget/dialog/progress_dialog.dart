@@ -114,7 +114,7 @@ class _DDProgressDialogWidgetState extends State<DDProgressDialogWidget> {
     );
   }
 
-  _dismiss() {
+  bool _dismiss() {
     if (!widget.dismissible) {
       return false;
     }
@@ -124,5 +124,6 @@ class _DDProgressDialogWidgetState extends State<DDProgressDialogWidget> {
       Navigator.pop(context);
       return true;
     }
+    return false;
   }
 }
