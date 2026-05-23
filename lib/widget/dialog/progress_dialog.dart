@@ -52,14 +52,13 @@ class ProgressDialog implements _ProgressDialog {
     Timer(const Duration(), () {
       showDialog(
         context: context,
-        builder:
-            (context) => DDProgressDialogWidget(
-              dismissible: dismissible,
-              child: child,
-              onDismiss: (show) {
-                _show = show;
-              },
-            ),
+        builder: (context) => DDProgressDialogWidget(
+          dismissible: dismissible,
+          child: child,
+          onDismiss: (show) {
+            _show = show;
+          },
+        ),
       );
     });
   }
@@ -100,17 +99,16 @@ class _DDProgressDialogWidgetState extends State<DDProgressDialogWidget> {
       onPopInvokedWithResult: (didPop, result) {
         _dismiss();
       },
-      child:
-          (widget.child == null)
-              ? const Center(
-                child: Card(
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: CircularProgressIndicator(strokeWidth: 2),
-                  ),
+      child: (widget.child == null)
+          ? const Center(
+              child: Card(
+                child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: CircularProgressIndicator(strokeWidth: 2),
                 ),
-              )
-              : Dialog(child: widget.child),
+              ),
+            )
+          : Dialog(child: widget.child),
     );
   }
 

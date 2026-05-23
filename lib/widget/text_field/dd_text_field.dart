@@ -62,8 +62,9 @@ class DDTextField extends StatelessWidget {
           onSaved!(value);
         }
       },
-      textCapitalization:
-          capitalize ? TextCapitalization.characters : TextCapitalization.none,
+      textCapitalization: capitalize
+          ? TextCapitalization.characters
+          : TextCapitalization.none,
       controller: controller,
       minLines: minLines,
       maxLines: maxLines,
